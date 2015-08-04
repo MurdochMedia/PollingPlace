@@ -25,6 +25,9 @@ gem 'jquery-rails'
 #Use Bootstrap library for style
 gem 'bootstrap-sass', '3.3.1'
 
+#Use font-awesome for icons
+gem 'font-awesome-sass', '4.2.0'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
