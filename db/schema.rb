@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812200535) do
+ActiveRecord::Schema.define(version: 20150812203558) do
 
   create_table "candidates", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -44,6 +44,15 @@ ActiveRecord::Schema.define(version: 20150812200535) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "Username"
+    t.integer  "Age"
+    t.string   "Gender"
+    t.string   "Ethnicity"
+    t.string   "State"
+    t.string   "City_or_Town"
+    t.string   "Born_and_Raised"
+    t.string   "First_Name"
+    t.string   "Last_Name"
   end
 
   add_index "voters", ["email"], name: "index_voters_on_email", unique: true
