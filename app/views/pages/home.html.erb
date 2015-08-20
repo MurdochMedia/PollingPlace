@@ -16,7 +16,7 @@
       <br/>
       <br/>
       <br/>
-      <%= link_to "Register as Voter", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+      <%= link_to "Register as Voter", new_user_registration_path(plan: @voter_plan.id), class: "btn btn-lg btn-primary" %>
     </div>
   </div>
   <div class="col-md-6">
@@ -31,7 +31,7 @@
         <li>Respond to Questions and Comments</li>
         <li>View News Articles and Videos about Your Campaign</li>
       </ul>
-      <%= link_to "Register as Candidate", new_user_registration_path, class: "btn btn-lg btn-danger" %>
+      <%= link_to "Register as Candidate", new_user_registration_path(@cand_plan.id), class: "btn btn-lg btn-danger" %>
     </div>
   </div>
 </div>
