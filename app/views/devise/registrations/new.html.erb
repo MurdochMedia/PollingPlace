@@ -12,18 +12,9 @@
           <%= f.text_field :Username, autofocus: true, class: 'form-control' %>
         </div>
         <div class="field form-group">
-          <%= f.label :First_Name %><br />
-          <%= f.text_field :First_Name, autofocus: true, class: 'form-control' %>
-        </div>
-        <div class="field form-group">
-          <%= f.label :Last_Name %><br />
-          <%= f.text_field :Last_Name, autofocus: true, class: 'form-control' %>
-        </div>
-        <div class="field form-group">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, class: 'form-control' %>
         </div>
-      
         <div class="field form-group">
           <%= f.label :password %>
           <% if @validatable %>
@@ -31,38 +22,11 @@
           <% end %><br />
           <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
         </div>
-      
-        <div class="field form group">
+        <div class="field form-group">
           <%= f.label :password_confirmation %><br />
           <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
         </div>
-        <div class="field form-group">
-          <%= f.label :Age %><br />
-          <%= f.text_field :Age, autofocus: true, class: 'form-control' %>
-        </div>
-        <div class="field form-group">
-          <%= f.label :Gender %><br />
-          <%= f.text_field :Gender, autofocus: true, class: 'form-control' %>
-        </div>
-        <div class="field form-group">
-          <%= f.label :Ethnicity %><br />
-          <%= f.text_field :Ethnicity, autofocus: true, class: 'form-control' %>
-        </div>
-        <div class="field form-group">
-          <%= f.label :State %><br />
-          <%= f.text_field :State, autofocus: true, class: 'form-control' %>
-        </div>
-        <div class="field form-group">
-          <%= f.label :City_or_Town %><br />
-          <%= f.text_field :City_or_Town, autofocus: true, class: 'form-control' %>
-        </div>
-        <div class="field form-group">
-          <%= f.label :Born_and_Raised %><br />
-          <%= f.text_field :Born_and_Raised, autofocus: true, class: 'form-control' %>
-        </div>
-      
-        
-      
+
         <div class="actions">
           <%= f.submit "Register", class: 'btn btn-success' %>
         </div>

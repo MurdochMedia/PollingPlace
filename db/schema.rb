@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150814191221) do
+ActiveRecord::Schema.define(version: 20150820200717) do
 
   create_table "candidates", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,6 +30,12 @@ ActiveRecord::Schema.define(version: 20150814191221) do
 
   add_index "candidates", ["email"], name: "index_candidates_on_email", unique: true
   add_index "candidates", ["reset_password_token"], name: "index_candidates_on_reset_password_token", unique: true
+
+  create_table "plans", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -55,6 +61,7 @@ ActiveRecord::Schema.define(version: 20150814191221) do
     t.string   "Middle_Name"
     t.string   "Political_Party"
     t.string   "Running_for_Office_of"
+    t.integer  "plan_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
