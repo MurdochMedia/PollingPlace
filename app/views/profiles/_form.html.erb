@@ -1,0 +1,47 @@
+<%= form_for @profile, url: user_profile_path do |f| %>
+  <div class="form-group">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :middle_name %>
+    <%= f.text_field :last_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :age %>
+    <%= f.select :age, (18..100), {}, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :gender %>
+    <%= f.select :gender, ['male', 'female'], {}, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :ethnicity %>
+    <%= f.select :ethnicity, ['White', 'Hispanic or Latino', 'Asian', 'Black or African american', 'Native Hawaiian or other Pacific Islander', 'American Indian or Alaska Native'], {}, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :political_party %>
+    <%= f.select :political_party, ['Democrat', 'Republican', 'Independent', 'Libertarian', 'Green', 'Constitution'], {}, class: 'form-control' %>
+  </div>
+   <% if current_user.plan_id == 2 %>
+        <div class="form-group">
+          <%= f.label :contact_email %>
+          <%= f.text_field :contact_email, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :candidate_for %>
+          <%= f.text_field :candidate_for, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :Platform %>
+          <%= f.text_area :Platform, class: 'form-control' %>
+        </div>
+    <% end %>
+ 
+  <div class="form-group">
+    <%= f.submit "Update Profile", class: 'btn btn-primary' %>
+  </div>
